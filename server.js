@@ -8,6 +8,10 @@ app.use(express.json());
 const API_KEY = process.env.API_KEY;
 const PORT = process.env.PORT || 9000;
 
+app.get('/', (req, res) =>{
+    res.send('testing')
+})
+
 app.post('/scan-url', async(req, res) =>{
     const {url} = req.body;
 
